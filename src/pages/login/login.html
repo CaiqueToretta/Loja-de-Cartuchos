@@ -1,0 +1,46 @@
+<ion-content padding>
+  <div class="welcome" align=center>
+    <br>
+    <br> Bem vindo ao
+    <br> MaxPrints
+  </div>
+  <!-- MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO MENO -->
+  <div class="login-form">
+    <ion-item>
+      <ion-label>Entrar como</ion-label>
+      <ion-select [(ngModel)]="typeUser">
+        <ion-option value="Cliente">Cliente</ion-option>
+        <ion-option value="Vendedor">Vendedor</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label class="login-input-icon">
+        <ion-icon class="icon-color" name="person"></ion-icon>
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="user" placeholder="Login" clearInput='true' class="login-input">
+      </ion-input>
+    </ion-item>
+    <ion-item *ngIf="showPass == false ">
+      <ion-label class="login-input-icon">
+        <ion-icon class="icon-color" name="lock"></ion-icon>
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="password" placeholder="Senha" clearInput='true' class="login-input">
+      </ion-input>
+    </ion-item>
+    <ion-item *ngIf="showPass == true ">
+      <ion-label class="login-input-icon">
+        <ion-icon class="icon-color" name="lock"></ion-icon>
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="password" placeholder="Senha" clearInput='true' class="login-input">
+      </ion-input>
+    </ion-item>
+    <ion-item class="show-pass">
+      <ion-checkbox [(ngModel)]="showPass" color="app" checked="false" (ionChange)="updateString(showPass)">
+      </ion-checkbox>
+      <ion-label>Exibir senha</ion-label>
+    </ion-item>
+    <button class="login-button" type="submit" ion-button block (click)="goToHome()">
+      Entrar
+    </button>
+  </div>
+</ion-content>

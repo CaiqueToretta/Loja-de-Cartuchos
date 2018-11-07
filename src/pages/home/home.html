@@ -1,14 +1,143 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title align="center">
+      Seleção de clientes
     </ion-title>
   </ion-navbar>
 </ion-header>
-
+ <!-- CAULIN CAULIN CAULIN CAULIN CAULIN CAULIN CAULIN CAULIN CAULIN CAULIN -->
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item no-lines>
+    <ion-label>Cliente já cadastrado:</ion-label>
+    <ion-select [(ngModel)]="client">
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
+    </ion-select>
+  </ion-item>
+  <!-- Cliente já cadastrado -->
+  <div *ngIf="client == 'Sim'">
+    <ion-item no-lines>
+      <ion-input type="text" [(ngModel)]="cpf" placeholder="CPF" clearInput='true' class="login-input">
+      </ion-input>
+    </ion-item>
+    <button class="login-button" type="submit" ion-button block (click)="goToItens()">
+      Continuar
+    </button>
+  </div>
+  <!-- Cliente não cadastrado -->
+  <div *ngIf="client == 'Não'">
+    <ion-item no-lines>
+      <ion-label>Tipo:</ion-label>
+      <ion-select [(ngModel)]="type">
+        <ion-option value="Pessoa Fisica">Pessoa Fisica</ion-option>
+        <ion-option value="Pessoa Juridica">Pessoa Juridica</ion-option>
+      </ion-select>
+    </ion-item>
+    <div *ngIf="type == 'Pessoa Fisica'">
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Nome" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Sobrenome" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="RG" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="CPF" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Data de Nascimento" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Email" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Telefone" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Celular" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Endereço" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Complemento" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Bairro" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="CEP" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <button class="login-button" type="submit" ion-button block>
+        Cadastrar
+      </button>
+    </div>
+    <div *ngIf="type == 'Pessoa Juridica'">
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="CNPJ" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Razão Social" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Nome Fantasia" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Inscrição estadual" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Inscrição municipal" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Email" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Telefone" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Celular" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Endereço" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Complemento" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="Bairro" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-input type="text" placeholder="CEP" clearInput='true' class="login-input">
+        </ion-input>
+      </ion-item>
+      <button class="login-button" type="submit" ion-button block>
+        Cadastrar
+      </button>
+    </div>
+  </div>
 </ion-content>

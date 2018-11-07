@@ -1,3 +1,69 @@
 page-home {
-
+        .item,
+        .item-md,
+        .item-ios {
+            padding: 0px;
+            position: relative;
+            margin-top: 16px;
+    
+            .item-inner {
+                padding-right: 0px;
+                border-bottom: none;
+                box-shadow: 0 0 0 0;
+            }
+    
+            .login-input {
+                border: solid 0.5px #b6bdbf;
+                border-radius: 1.5px;
+                box-shadow: inset 0 0.5px 4px 0 rgba(0, 0, 0, 0.1);
+                background-color: #ffffff;
+            }
+    
+            .item.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+                border-bottom: none;
+                box-shadow: 0 0 0 0;
+            }
+    
+            .input, .text-input {
+                margin: 0px;
+                padding: 6px;
+                padding-left: 20px;
+            }
+        }
+    
+        .login-input-icon {
+            position: absolute;
+            z-index: 999;
+            padding-left: 8px;
+            padding-top: 5px;
+            margin: 0px;
+        }
+    
+        .show-pass {
+            background-color: transparent;
+            margin:0px;
+    
+            .label, .label-md, .label-ios {
+                font-size: 12px;
+            }
+        }
+        .login-button {
+            height: 44px;
+            margin-top: 16px;
+            border-radius: 3px;
+            background-color: rgb(50, 154, 168);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+            font-size: 16px;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            text-transform: initial;
+        }
+        .item-md.item-block .item-inner {
+            padding-right: 0px;
+            border-bottom: 1px solid #dedede;
+        }
 }
